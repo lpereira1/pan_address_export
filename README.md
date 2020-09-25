@@ -5,6 +5,12 @@ It will then import the address group with all its nested entries into a differe
 
 This is useful if you dont have Panorama and need to get an address group from one firewall to another. 
 
+### Example
+```
+addressexport.py -if 10.1.1.1 -iuser admin -ipass admin -group CORPORATE_USERS -ef 10.2.2.2 -output -file corp_users.json -commit
+```
+
+
 ```
 usage: addressexport.py [-h] [-if IMPORT_FW] [-ef EXPORT_FW]
                         [-iuser IMPORT_USERNAME] [-ipass IMPORT_PASSWORD]
