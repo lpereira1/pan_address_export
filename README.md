@@ -25,15 +25,18 @@ optional arguments:
   -ipass IMPORT_PASSWORD, --import_password IMPORT_PASSWORD
                         Password to login as on Importing Firewall
   -euser EXPORT_USERNAME, --export_username EXPORT_USERNAME
-                        Username to login as on Exporting Firewall. If not set will default to the credentials for the import firewall
+                        Username to login as on Exporting Firewall. If not set will default to the credentials 
+                        for the import firewall.
   -epass EXPORT_PASSWORD, --export_password EXPORT_PASSWORD
-                        Password to login as on Exporting Firewall. If not setwill default to the credentials for the import firewall
-  -output, --output     If set, will output of the export as a text file (in JSON)
+                        Password to login as on Exporting Firewall. If not setwill default to the credentials 
+                        for the import firewall.
+  -output, --output     If set, will output of the export as a text file (in JSON).
   -file OUTPUT_FILE, --output_file OUTPUT_FILE
                         if output yes: File name to export to, Default: fw_export.json
   -group GROUP, --group GROUP
-                        Name of the Group you want to export
+                        Name of the Group you want to export.
                         
   -commit, --commit     If set, will commit the changes imported
-                        from this script. Default is to not commit. This allows you to review your changes from the webui if you wish
+                        from this script. Default is to not commit. This allows you to review your changes 
+                        from the webui if you wish.
 ```
