@@ -5,6 +5,15 @@ It will then import the address group with all its nested entries into a differe
 
 This is useful if you dont have Panorama and need to get an address group from one firewall to another. 
 
+### Installation and requirements
+Requires 
+ * Python3 
+ * pan-os-python 
+
+```bash
+pip3 install -r requirements.txt
+
+
 ### Example
 ```
 addressexport.py -if 10.1.1.1 -iuser admin -ipass admin -group CORPORATE_USERS -ef 10.2.2.2 -output -file corp_users.json -commit
