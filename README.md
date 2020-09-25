@@ -5,6 +5,8 @@ It will then import the address group with all its nested entries into a differe
 
 This is useful if you dont have Panorama and need to get an address group from one firewall to another. 
 
+You can chose to export to a file as JSON and commit or not commit as you feel is needed. See the arguments at the bottom of the readme. 
+
 ### Installation and requirements
 Requires 
  * Python3 
@@ -15,8 +17,13 @@ pip3 install -r requirements.txt
 ```
 
 ### Example
+#### Export from one firewal and import to another where the same username and password applies to both firewall with file output and commit
 ```
 addressexport.py -if 10.1.1.1 -iuser admin -ipass admin -group CORPORATE_USERS -ef 10.2.2.2 -output -file corp_users.json -commit
+```
+#### Export from one firewall with file output only
+```
+addressexport.py -if 10.1.1.1 -iuser admin -ipass admin -group CORPORATE_USERS -output -file_only -file corp_users.json 
 ```
 
 
