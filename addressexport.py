@@ -64,7 +64,7 @@ def firewall_import(import_fw, import_dict, import_username, import_password, co
         pushing_fw.add(group)
     start = datetime.datetime.now()
     group.create_similar()
-    print(f"Imported { len(import_dict['addresses']) } addresses and {len(import_dict['groups'])} to { import_fw }")
+    print(f"Imported { len(import_dict['addresses']) } addresses and {len(import_dict['groups'])} groups to { import_fw }")
     print(f"which took: {datetime.datetime.now() - start}")
     
     if commit is True:
@@ -86,7 +86,7 @@ def main(export_username,
             commit,
             file_only): 
     if output is True:
-        with open(output_file, 'w') as out_file:
+        with open(output_file, 'w+') as out_file:
             fw_pull = firewall_export(export_fw, group, export_username, export_password)
             out_file.write(json.dumps(fw_pull, indent=4))
     else:
